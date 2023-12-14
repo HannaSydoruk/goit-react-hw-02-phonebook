@@ -4,6 +4,7 @@ import { nanoid } from 'nanoid';
 class ContactForm extends Component {
   state = {
     name: '',
+    number: '',
   };
 
   onChangeHandler = e => {
@@ -22,6 +23,7 @@ class ContactForm extends Component {
   reset = () => {
     this.setState({
       name: '',
+      number: '',
     });
   };
 
@@ -32,6 +34,14 @@ class ContactForm extends Component {
           type="text"
           name="name"
           value={this.state.name}
+          onChange={this.onChangeHandler}
+          id={nanoid()}
+          required
+        />
+        <input
+          type="tel"
+          name="number"
+          value={this.state.number}
           onChange={this.onChangeHandler}
           id={nanoid()}
           required

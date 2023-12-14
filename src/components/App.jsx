@@ -9,6 +9,13 @@ export class App extends Component {
   };
 
   formSubmitHandler = data => {
+    const hasDuplicates = this.state.contacts.some(
+      contact => contact.name === data.name
+    );
+    if (hasDuplicates) {
+      alert(`${data.name} is already in contacts!`);
+      return;
+    }
     const contact = {
       id: nanoid(),
       ...data,
