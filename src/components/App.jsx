@@ -32,14 +32,20 @@ export class App extends Component {
 
   onChangeFilter = e => {
     const value = e.target.value;
-    this.setState({ ...this.state, filter: value });
+    this.setState({ filter: value });
+  };
+
+  onDeleteHandler = contactId => {
+    this.setState({
+      contacts: this.state.contacts.filter(contact => contact.id !== contactId),
+    });
   };
 
   render() {
     const filteredContacts = this.state.contacts.filter(contact => {
       return contact.name
         .toLowerCase()
-        .includes(this.state.filter.toLocaleLowerCase());
+        .includes(this.state.filter.trim().toLocaleLowerCase());
     });
     return (
       <>
@@ -48,7 +54,10 @@ export class App extends Component {
           onChangeFilter={this.onChangeFilter}
           filter={this.state.filter}
         />
-        <ContactList contacts={filteredContacts} />
+        <ContactList
+          contacts={filteredContacts}
+          onDeleteHandler={this.onDeleteHandler}
+        />
       </>
     );
   }

@@ -1,0 +1,35 @@
+/* styles.css (or any other suitable name) */
+
+/* ContactList component styles */
+.contactlist {
+  list-style: none;
+  padding: 0;
+}
+
+.contactlist h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* ContactListItem component styles */
+.contactlist-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contactlist-item img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.contactlist-item button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
