@@ -6,13 +6,16 @@ class ContactListItem extends Component {
     const onDeleteHandler = this.props.onDeleteHandler;
     return (
       <li className={css['contact-list']}>
-        {contact.name} {contact.number}
-        <button
-          className={css['delete-btn']}
-          onClick={() => onDeleteHandler(contact.id)}
-        >
-          Delete
-        </button>
+        <span className={css.name}>{contact.name}</span>
+        <span className={css.phone}>
+          {contact.number}
+          <button
+            className={css['delete-btn']}
+            onClick={() => onDeleteHandler(contact.id)}
+          >
+            Delete
+          </button>
+        </span>
       </li>
     );
   }

@@ -3,7 +3,7 @@
   gap: 15px;
 }
 .form-input input {
-  background-color: azure;
+  background-color: rgb(251, 253, 252);
   border: solid 1px rgb(39, 100, 79);
   border-radius: 5px;
   width: 250px;
