@@ -7,7 +7,6 @@ class ContactList extends Component {
     const { contacts, onDeleteHandler } = this.props;
     return (
       <>
-        <h2>Contacts</h2>
         <ul className={css.contactlist}>
           {contacts.map(contact => {
             return (

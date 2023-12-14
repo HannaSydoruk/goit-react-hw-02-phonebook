@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import css from './Filter.module.css';
 
 class Filter extends Component {
   render() {
@@ -11,6 +12,8 @@ class Filter extends Component {
           type="text"
           value={filter}
           name="keywords"
+          placeholder="Enter Name here..."
+          className={css['input-filter']}
           onChange={onChangeFilter}
         />
       </>

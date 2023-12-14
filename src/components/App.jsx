@@ -48,8 +48,10 @@ export class App extends Component {
         .includes(this.state.filter.trim().toLocaleLowerCase());
     });
     return (
-      <>
+      <div>
+        <h1>Phonebook</h1>
         <ContactForm onSubmit={this.formSubmitHandler} />
+        <h2>Contacts</h2>
         <Filter
           onChangeFilter={this.onChangeFilter}
           filter={this.state.filter}
@@ -58,7 +60,7 @@ export class App extends Component {
           contacts={filteredContacts}
           onDeleteHandler={this.onDeleteHandler}
         />
-      </>
+      </div>
     );
   }
 }
