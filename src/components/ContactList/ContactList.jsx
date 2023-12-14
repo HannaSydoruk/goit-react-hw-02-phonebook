@@ -12,7 +12,6 @@ class ContactList extends Component {
             return <ContactListItem contact={contact} key={contact.id} />;
           })}
         </ul>
-        ;
       </>
     );
   }
