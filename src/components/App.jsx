@@ -12,7 +12,7 @@ export class App extends Component {
 
   formSubmitHandler = data => {
     const hasDuplicates = this.state.contacts.some(
-      contact => contact.name === data.name
+      contact => contact.name.toLowerCase() === data.name.toLocaleLowerCase()
     );
     if (hasDuplicates) {
       alert(`${data.name} is already in contacts!`);
